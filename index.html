@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dr. D Care | Natural Healing</title>
+<link rel="icon" type="image/png" href="logo/favicon.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- SEO -->
+<meta name="description" content="Dr. D Care, Best Homeopathy Clinic providing natural and safe treatments. Book appointment today.">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  padding-top: 80px;
+
+}
+
+/* Navbar */
+.navbar {
+  background: white;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+/* Hero */
+.hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) fixed,
+  url('images/weed-leaves-oil-still-life.jpg') center/cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+/* Buttons */
+.btn-main {
+  background: #2e8b57;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 25px;
+}
+.btn-main:hover { background: #246b45; }
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+.card:hover { transform: translateY(-8px); }
+
+/* Section */
+section { padding: 80px 0; }
+
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #2e8b57, #3cb371);
+  color: white;
+  border-radius: 20px;
+  padding: 60px;
+}
+
+/* WhatsApp Button */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #ccc;
+  padding: 40px 0;
+}
+.navbar-brand img {
+    height: 50px; /* Increase this number until it looks right */
+    width: auto;  /* Maintains aspect ratio */
+    object-fit: contain;
+}
+
+/* Optional: Reduce navbar padding if the logo makes the bar too tall */
+.navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+ #services .card {
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+#services .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+#services i {
+  background: #e9f7ef;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.blog-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.blog-card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.read-more {
+  text-decoration: none;
+  color: #2e8b57;
+  font-weight: 500;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.cta-section {
+  padding: 80px 0;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, #2e8b57, #3cb371);
+  color: white;
+  border-radius: 20px;
+  padding: 60px 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle glow effect */
+.cta-box::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  top: -50px;
+  right: -50px;
+}
+
+.cta-box::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  bottom: -40px;
+  left: -40px;
+}
+
+.cta-box .btn {
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.cta-box .btn:hover {
+  transform: translateY(-2px);
+}
+.instagram-section {
+  padding: 80px 0;
+}
+
+.insta-img {
+  border-radius: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.insta-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.instagram-section {
+  padding: 80px 0;
+}
+
+.insta-card {
+  max-width: 500px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.insta-card:hover {
+  transform: translateY(-5px);
+}
+
+.insta-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.insta-icon {
+  font-size: 24px;
+  color: #E1306C;
+}
+
+.insta-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.insta-text {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.insta-stats {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.insta-stats h5 {
+  margin: 0;
+  font-weight: bold;
+  color: #2e8b57;
+}
+
+.insta-stats small {
+  color: #777;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 0;
+  }
+  .navbar-collapse {
+  transition: all 0.3s ease;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+  <div class="container">
+
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="logo/logohomeo.png" alt="Dr. D Care">
+      <span style="color:green">Dr. D Care</span>
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto text-center text-lg-start">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blogs">Blogs</a></li>
+      </ul>
+
+      <!-- Button -->
+      <div class="text-center mt-3 mt-lg-0 ms-lg-3">
+        <a href="https://wa.me/9987112812" class="btn btn-main">Consult Now</a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero text-center">
+<div class="container" data-aos="fade-up">
+  <h1 class="display-4 fw-bold">Natural Healing with Homeopathy</h1>
+  <p class="lead">Safe • Gentle • Permanent Cure</p>
+  <a href="https://wa.me/917021213373" class="btn btn-main mt-3">Book Appointment</a>
+  <a href="#blogs" class="btn btn-main mt-3">Read Our Blog</a>
+  <br/><br/>
+  <p class="lead">Healing Redefined.</p>
+</div>
+</section>
+
+<!-- About -->
+<!-- About -->
+<section id="about">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Image -->
+      <div class="col-md-6" data-aos="fade-right">
+        <img src="images/essential-oil-peppermint-bottle-with-fresh-green-peppermint.jpg" 
+             class="img-fluid rounded-4 shadow" 
+             alt="Homeopathy Treatment">
+      </div>
+
+      <!-- Content -->
+      <div class="col-md-6" data-aos="fade-left">
+        <h2 class="fw-bold mb-3">About Dr. D Care</h2>
+        
+        <p class="text-muted">
+          At Dr. D Care, we believe in treating the root cause, not just the symptoms. 
+          Our homeopathic treatments are safe, natural, and tailored to each individual.
+        </p>
+
+        <p class="text-muted">
+          With a focus on holistic healing, we help patients achieve long-term wellness 
+          without side effects.
+        </p>
+
+        <!-- Highlights -->
+        <div class="d-flex mb-3">
+          <i class="fa fa-check text-success me-2 mt-1"></i>
+          <p class="mb-0">100% Natural & Safe Treatment</p>
+        </div>
+
+        <div class="d-flex mb-3">
+          <i class="fa fa-check text-success me-2 mt-1"></i>
+          <p class="mb-0">Personalized Care for Every Patient</p>
+        </div>
+
+        <div class="d-flex mb-4">
+          <i class="fa fa-check text-success me-2 mt-1"></i>
+          <p class="mb-0">Focus on Root Cause Healing</p>
+        </div>
+
+        <a href="#" class="btn btn-main">Learn More</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+ <section id="services" class="bg-light">
+<div class="container text-center">
+
+  <h2 class="fw-bold mb-3">Our Services</h2>
+  <p class="text-muted mb-5">Comprehensive homeopathic care for all your health needs</p>
+
+  <div class="row g-4" id="serviceList">
+
+    <!-- Visible Services -->
+    <div class="col-md-4 service-item">
+      <div class="card p-4 h-100">
+        <i class="fa fa-heartbeat fa-2x text-success mb-3"></i>
+        <h5>Anxiety</h5>
+        <p class="text-muted">Mental wellness & stress management care.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 service-item">
+      <div class="card p-4 h-100">
+        <i class="fa fa-bolt fa-2x text-success mb-3"></i>
+        <h5>Migraine</h5>
+        <p class="text-muted">Effective relief from chronic headaches.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 service-item">
+      <div class="card p-4 h-100">
+        <i class="fa fa-leaf fa-2x text-success mb-3"></i>
+        <h5>Warts</h5>
+        <p class="text-muted">Safe & natural skin treatment solutions.</p>
+      </div>
+    </div>
+
+    <!-- Hidden Services -->
+    <div class="col-md-4 service-item extra-service d-none">
+      <div class="card p-4 h-100">
+        <i class="fa fa-child fa-2x text-success mb-3"></i>
+        <h5>Children's Illnesses</h5>
+        <p class="text-muted">Gentle care for kids' health issues.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 service-item extra-service d-none">
+      <div class="card p-4 h-100">
+        <i class="fa fa-user-md fa-2x text-success mb-3"></i>
+        <h5>Skin Disease</h5>
+        <p class="text-muted">Treatment for acne, eczema & psoriasis.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 service-item extra-service d-none">
+      <div class="card p-4 h-100">
+        <i class="fa fa-female fa-2x text-success mb-3"></i>
+        <h5>Women Health</h5>
+        <p class="text-muted">Hormonal & reproductive health care.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 service-item extra-service d-none">
+      <div class="card p-4 h-100">
+        <i class="fa fa-wheelchair fa-2x text-success mb-3"></i>
+        <h5>Musculoskeletal Care</h5>
+        <p class="text-muted">Joint, muscle & pain management.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 service-item extra-service d-none">
+      <div class="card p-4 h-100">
+        <i class="fa fa-medkit fa-2x text-success mb-3"></i>
+        <h5>Gastric Disease</h5>
+        <p class="text-muted">Digestive & stomach disorder treatment.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 service-item extra-service d-none">
+      <div class="card p-4 h-100">
+        <i class="fa fa-plus-square fa-2x text-success mb-3"></i>
+        <h5>Acute Illness Care</h5>
+        <p class="text-muted">Quick care for infections & fever.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Button -->
+  <button class="btn btn-main mt-5" id="toggleBtn">View All</button>
+
+</div>
+</section>
+
+<!-- Blogs -->
+<section id="blogs" class="bg-light">
+<div class="container text-center">
+
+  <h2 class="fw-bold mb-3">Latest Health Insights</h2>
+  <p class="text-muted mb-5">Expert advice and homeopathic guidance for better health</p>
+
+  <div class="row g-4">
+
+    <!-- Blog 1 -->
+    <div class="col-md-4" data-aos="fade-up">
+      <div class="card blog-card h-100">
+        <img src="images/blogs/example1_dr_d_care.jpeg" class="card-img-top" alt="Localized Piercing Infection">
+        
+        <div class="card-body text-start">
+          <span class="badge bg-success mb-2">Skin Care</span>
+          <h5 class="fw-bold">Localized Piercing Infection</h5>
+          <p class="text-muted small">
+            Causes, symptoms, and natural homeopathic treatment options.
+          </p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog 2 -->
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card blog-card h-100">
+        <img src="images/blogs/example3_dr_d_care.jpeg" class="card-img-top" alt="Post Inflammatory Hypopigmentation">
+        
+        <div class="card-body text-start">
+          <span class="badge bg-success mb-2">Skin Treatment</span>
+          <h5 class="fw-bold">Post Inflammatory Hypopigmentation</h5>
+          <p class="text-muted small">
+            Understand skin discoloration and how to treat it effectively.
+          </p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog 3 -->
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="card blog-card h-100">
+        <img src="images/blogs/example2_dr_d_care.jpeg" class="card-img-top" alt="Androgenetic Alopecia">
+        
+        <div class="card-body text-start">
+          <span class="badge bg-success mb-2">Hair Care</span>
+          <h5 class="fw-bold">Androgenetic Alopecia</h5>
+          <p class="text-muted small">
+            Learn about hair loss causes and safe treatment solutions.
+          </p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- View All Button -->
+  <!-- <a href="#" class="btn btn-main mt-5">View All Blogs</a> -->
+
+</div>
+</section>
+
+<!-- Appointment -->
+<!-- <section id="appointment" class="bg-light">
+<div class="container">
+<h2 class="text-center mb-4">Book Appointment</h2>
+
+<form class="row g-3">
+  <div class="col-md-6">
+    <input type="text" class="form-control" placeholder="Your Name">
+  </div>
+  <div class="col-md-6">
+    <input type="email" class="form-control" placeholder="Email">
+  </div>
+  <div class="col-md-6">
+    <input type="date" class="form-control">
+  </div>
+  <div class="col-md-6">
+    <input type="tel" class="form-control" placeholder="Phone">
+  </div>
+
+  <div class="col-12 text-center">
+    <button class="btn btn-main">Submit</button>
+  </div>
+</form>
+
+</div>
+</section> -->
+
+<!-- CTA -->
+ <section class="cta-section">
+  <div class="container">
+    <div class="cta-box text-center">
+
+      <h2 class="fw-bold mb-3">Start Your Natural Healing Journey Today</h2>
+      
+      <p class="mb-4 text-light">
+        Consult with our expert and get personalized homeopathic treatment 
+        for long-lasting relief — safe, gentle, and effective.
+      </p>
+
+      <!-- Buttons -->
+      <div class="d-flex justify-content-center flex-wrap gap-3">
+        <a href="https://wa.me/917021213373" class="btn btn-light px-4">
+          <i class="fa fa-calendar me-2"></i> Book Appointment
+        </a>
+
+        <a href="https://wa.me/917021213373" class="btn btn-outline-light px-4">
+          <i class="fa fa-whatsapp me-2"></i> Chat on WhatsApp
+        </a>
+      </div>
+
+      <!-- Trust Line -->
+      <p class="mt-4 small opacity-75">
+        ✔ 100% Natural Treatment &nbsp; | &nbsp; ✔ No Side Effects &nbsp; | &nbsp; ✔ Personalized Care
+      </p>
+
+    </div>
+  </div>
+</section>
+<!-- <section>
+<div class="container">
+<div class="cta text-center">
+  <h2>Ready to Start Your Health Journey?</h2>
+  <p>Take your first step towards wellness.</p>
+
+  <a href="#" class="btn btn-light m-2">Schedule Consultation</a>
+  <a href="https://wa.me/917021213373" class="btn btn-outline-light m-2">WhatsApp</a>
+</div>
+</div>
+</section> -->
+
+<!-- Instagram -->
+ <section class="instagram-section">
+  <div class="container text-center">
+
+    <h2 class="fw-bold mb-2">Follow Our Instagram</h2>
+    <p class="text-muted mb-4">@dr.d_care</p>
+
+    <!-- Instagram Preview Card -->
+    <div class="insta-card mx-auto">
+
+      <div class="insta-header">
+        <i class="fa fa-instagram insta-icon"></i>
+        <span class="insta-title">dr.d_care</span>
+      </div>
+
+      <p class="insta-text">
+        Daily updates on homeopathy treatments, patient awareness, skin & hair care tips,
+        and real healing journeys.
+      </p>
+
+      <!-- Stats -->
+      <div class="insta-stats">
+        <div>
+          <h5>20+</h5>
+          <small>Posts</small>
+        </div>
+        <div>
+          <h5>194+</h5>
+          <small>Followers</small>
+        </div>
+        <div>
+          <h5>4.9★</h5>
+          <small>Trust</small>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <a href="https://instagram.com/dr.d_care" target="_blank" class="btn btn-main mt-4">
+        <i class="fa fa-instagram me-2"></i> Open Instagram
+      </a>
+
+    </div>
+
+  </div>
+</section>
+ <!-- <section class="instagram-section">
+  <div class="container text-center">
+
+    <h2 class="fw-bold mb-3">Follow Us on Instagram</h2>
+    <p class="text-muted mb-5">@dr.d_care</p>
+
+    <!-- Image Grid -->
+    <!-- <div class="row g-3">
+
+      <div class="col-6 col-md-3">
+        <img src="images/insta1.jpg" class="img-fluid insta-img" alt="">
+      </div>
+
+      <div class="col-6 col-md-3">
+        <img src="images/insta2.jpg" class="img-fluid insta-img" alt="">
+      </div>
+
+      <div class="col-6 col-md-3">
+        <img src="images/insta3.jpg" class="img-fluid insta-img" alt="">
+      </div>
+
+      <div class="col-6 col-md-3">
+        <img src="images/insta4.jpg" class="img-fluid insta-img" alt="">
+      </div>
+
+    </div> 
+
+    <a href="https://instagram.com/dr.d_care" target="_blank" 
+       class="btn btn-main mt-5">
+       <i class="fa fa-instagram me-2"></i> Follow on Instagram
+    </a>
+
+  </div>
+  
+</section> -->
+<!-- <div class="elfsight-app-04d8c670-f814-4da9-bc64-466401517f29"></div> -->
+<!-- <section class="bg-light text-center">
+<div class="container">
+  <h2>Instagram</h2>
+  <p>@homeocareclinic</p>
+</div>
+</section> -->
+
+<!-- Footer -->
+ <footer class="footer">
+  <div class="container">
+
+    <div class="row g-4">
+
+      <!-- Clinic Info -->
+      <div class="col-md-4">
+        <h5 class="fw-bold text-white mb-3">Dr. D Care</h5>
+        <p class="text-light small">
+          Natural & holistic homeopathic treatment focused on root-cause healing.
+        </p>
+
+        <p class="text-light small mb-1">
+          <i class="fa fa-phone me-2"></i> +91 7021213373
+        </p>
+
+        <p class="text-light small">
+          <i class="fa fa-envelope me-2"></i> drdcare@gmail.com
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4">
+        <h5 class="fw-bold text-white mb-3">Quick Links</h5>
+
+        <p class="mb-1"><a href="#home">Home</a></p>
+        <p class="mb-1"><a href="#about">About</a></p>
+        <p class="mb-1"><a href="#services">Services</a></p>
+        <p class="mb-1"><a href="#blogs">Blogs</a></p>
+        <p class="mb-1"><a href="https://wa.me/917021213373">Appointment</a></p>
+      </div>
+
+      <!-- Timing + Social -->
+      <div class="col-md-4">
+        <h5 class="fw-bold text-white mb-3">Clinic Hours</h5>
+        <p class="text-light small">Mon - Sat: 10:00 AM - 7:00 PM</p>
+        <p class="text-light small">Sunday: Closed</p>
+
+        <div class="mt-3">
+          <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a>
+          <a href="https://wa.me/917021213373" class="social-icon"><i class="fa fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <hr class="border-light mt-4">
+
+    <div class="text-center small text-light">
+      © 2026 Dr. D Care. All Rights Reserved.
+    </div>
+
+  </div>
+</footer>
+<!-- <footer>
+<div class="container">
+<div class="row">
+  <div class="col-md-4">
+    <h5>Contact</h5>
+    <p>+91 9876543210</p>
+  </div>
+  <div class="col-md-4">
+    <h5>Hours</h5>
+    <p>10 AM - 7 PM</p>
+  </div>
+  <div class="col-md-4">
+    <h5>About</h5>
+    <p>Natural healing clinic.</p>
+  </div>
+</div>
+</div>
+</footer> -->
+
+<!-- WhatsApp Floating -->
+<a href="https://wa.me/917021213373" class="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init();
+</script>
+<script>
+const toggleBtn = document.getElementById("toggleBtn");
+const extraServices = document.querySelectorAll(".extra-service");
+
+let isExpanded = false;
+
+toggleBtn.addEventListener("click", () => {
+  extraServices.forEach(item => item.classList.toggle("d-none"));
+  
+  isExpanded = !isExpanded;
+  toggleBtn.innerText = isExpanded ? "Show Less" : "View All";
+});
+</script>
+
+</body>
+</html>
